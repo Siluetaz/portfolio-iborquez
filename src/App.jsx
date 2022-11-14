@@ -1,17 +1,17 @@
 import { useState } from 'react'
-import {Card} from './components/Card'
+import { Card } from './components/Card'
 
 import './sass/layouts/App.scss'
 
 import githubLogo from './assets/github-logo.png'
 import linkedinLogo from './assets/linkedin-logo.svg'
 
+import data from '../data.json'
+
 
 const App = () => {
-
   return (
     <>
-
       <header>
         <nav className='navbar'>
           <ul className='name-side'>
@@ -27,16 +27,16 @@ const App = () => {
       </header>
       <main className='container'>
         <section className='welcome-side'>
-          <div className='welcome-side__my-logo'><img src="" alt="" /></div>
+          {/* <div className='welcome-side__my-logo'><img src="" alt="" /></div> */}
           <h1 className='welcome-side__title'>¡Bienvenido/a!<br></br> Soy <span className='under'>Ismael Borquez</span></h1>
           <p className='welcome-side__presentation'>Analista programador, apasionado por el desarrollo y el adquirir nuevas habilidades y conocimientos.</p>
-          <button className='welcome-side__contact-btn'>
+          {/* <button className='button'>
             CONTACTO
-          </button>
+          </button> */}
         </section>
         <hr className='line' />
         <section className='knowledge-side'>
-          <h3 className='subtitle'>Conocimientos</h3>
+          <h2 className='subtitle'>Conocimientos</h2>
           <div className='knowledges'>
             <div className='knowledges__frontend-side'>
               <div className='title'>Frontend</div>
@@ -55,11 +55,25 @@ const App = () => {
             </div>
           </div>
         </section>
-        <hr className='line' />
         <section className='projects-side'>
-        <h3 className='subtitle'>Proyectos</h3>
+          <h2 className='subtitle'>Proyectos</h2>
+          <div className='projects-side__card-container'>
+            {data.map((project, i) => <Card key={i}
+              project={project}
+            />)}
+          </div>
         </section>
+        {/* <section className='contact'>
+            <h2 className='contact__title'>Contact</h2>
+            <p className='contact__description'></p>
+        </section> */}
       </main>
+      <footer className='footer'>
+        <div className='footer__text'>Proyecto realizado con <a className='link' href='https://reactjs.org/'>React</a> + <a className='link' href='https://vitejs.dev/'>Vite</a></div> <ul className='sites'>
+          <li className='sites__logo'><img src={githubLogo} alt="" /></li>
+          <li className='sites__logo'><img src={linkedinLogo} alt="" /></li>
+        </ul>
+      </footer>
     </>
   )
 }

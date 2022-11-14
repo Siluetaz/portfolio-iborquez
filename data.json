@@ -1,24 +1,38 @@
-{
-"projects": [
-  {
-    "name":"Space tourism",
-    "imgDirection": "../assets/space-tourism.jpg",
-    "Technologies": [
-      "HTML", "SASS", "Vue"
-    ]
-  },
-  {
-    "name":"Interactive card",
-    "imgDirection": "../assets/interactive-card.jpg",
-    "Technologies": [
-      "HTML", "SASS", "Vue"
-    ]
-  },{
-    "name":"Calculator app",
-    "imgDirection": "../assets/Calculator app.jpg",
-    "Technologies": [
-      "HTML", "SASS", "Vue"
-    ]
-  }
-]
-}
+[
+    {
+      "name": "Space tourism",
+      "imgDirection": "./dist/assets/space-tourism.png",
+      "technologies": [
+        "HTML",
+        "SASS",
+        "Vue"
+      ],
+      "siteUrl": "https://siluetaz.github.io/space-tourism-frontend-mentor/",
+      "codeUrl": "https://github.com/Siluetaz/space-tourism-frontend-mentor"
+    
+    },
+    {
+      "name": "Interactive card",
+      "imgDirection": "./dist/assets/interactive-card.png",
+      "technologies": [
+        "HTML",
+        "SASS",
+        "Vue"
+      ],
+        "siteUrl": "https://siluetaz.github.io/interactive-card-frontend-mentor/",
+        "codeUrl": "https://github.com/Siluetaz/interactive-card-frontend-mentor"
+      
+    },
+    {
+      "name": "Calculator app",
+      "imgDirection": "./dist/assets/calculator-app.png",
+      "technologies": [
+        "HTML",
+        "SASS",
+        "Vue"
+      ],
+      "siteUrl": "https://siluetaz.github.io/calculator-app-frontend-mentor/",
+      "codeUrl": "https://github.com/Siluetaz/calculator-app-frontend-mentor"
+    
+    }
+  ]
