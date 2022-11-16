@@ -1,0 +1,23 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+.knowledges {
+  display: flex;
+  justify-content: space-evenly;
+
+  &__title {
+    margin: 0;
+    font-size: clamp(2.2rem, 5vw, 2.5rem);
+    font-weight: initial;
+    text-decoration: underline v.$secondary 0.12rem;
+  }
+
+  &__item {
+    font-size: clamp(1.6rem, 4vw, 1.8rem);
+    margin: 1rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.2rem;
+  }
+}

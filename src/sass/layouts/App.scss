@@ -12,12 +12,12 @@
   border: none;
   border-bottom: 0.2rem solid v.$secondary;
   letter-spacing: 0.05rem;
-  margin: 1rem 0;
   text-transform: uppercase;
-  padding: 0.8rem;
+  padding: 1rem;
   text-decoration: none;
   transition: background-color .5s, border .5s;
   border-radius: .2rem;
+  font-size: 1.45rem;
 
   &:hover {
     cursor: pointer;
@@ -30,7 +30,7 @@
   font-weight: initial;
   text-align: start;
   margin: 3rem 0;
-  font-size: 2.8rem;
+  font-size: clamp(2.4rem,4vw, 2.8rem);
   color: v.$font-color;
 
   &__colored {

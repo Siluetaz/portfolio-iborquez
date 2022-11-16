@@ -1,5 +1,6 @@
 import '../sass/layouts/Content.scss'
 import { Card } from './Card'
+import { Knowledge } from './Knowledge'
 import data from '../../data.json'
 const Content = () => {
   return (
@@ -13,26 +14,7 @@ const Content = () => {
       </button> */}
       </section>
       <hr className='line' />
-      <section className='knowledge-side'>
-        <h2 className='subtitle'>Conocimientos</h2>
-        <div className='knowledges'>
-          <div>
-            <div className='knowledges__title'>Frontend</div>
-            <div className='knowledges__item'>HTML</div>
-            <div className='knowledges__item'>CSS</div>
-            <div className='knowledges__item'>SASS</div>
-            <div className='knowledges__item'>Javascript</div>
-            <div className='knowledges__item'>React</div>
-            <div className='knowledges__item'>Vue</div>
-          </div>
-          <div>
-            <div className='knowledges__title'>Backend</div>
-            <div className='knowledges__item'>PHP</div>
-            <div className='knowledges__item'>Laravel</div>
-            <div className='knowledges__item'>MySQL</div>
-          </div>
-        </div>
-      </section>
+      <Knowledge />
       <section className='projects-side'>
         <h2 className='subtitle'>Proyectos</h2>
         <div className='projects-side__card-container'>
