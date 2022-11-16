@@ -2,9 +2,13 @@
 @use '../base/mixins' as m;
 
 .card {
-  width: 45%;
-  min-width: 26rem;
-  max-width: 43rem;
+  min-width: 27rem;
+  @include m.tablet{
+    min-width: 30rem;
+  }
+  @include m.desktop{
+    min-width: 43rem;
+  }
 
   &__image {
     width: 100%;
@@ -33,6 +37,6 @@
     display: flex;
     justify-content: space-evenly;
     gap: 1rem;
-    margin: 1rem 0;
+    margin: 1rem 0 2rem;
   }
 }

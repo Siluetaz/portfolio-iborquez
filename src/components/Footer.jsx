@@ -4,9 +4,6 @@ import { Social } from './Social'
 
 import data from '../../data.json'
 
-import githubLogo from '../assets/github-logo.png'
-import linkedinLogo from '../assets/linkedin-logo.svg'
-
 const Footer = () => {
   return (
     <footer className='footer'>

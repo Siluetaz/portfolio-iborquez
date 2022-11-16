@@ -40,11 +40,28 @@
 
 
   .projects-side {
-    &__card-container {
-      display: flex;
-      justify-content: space-evenly;
-      flex-wrap: wrap;
-      gap: 5rem;
+
+    &__cards {
+      overflow: auto;
+
+      &::-webkit-scrollbar {
+        width: 0.2rem;
+        background-color: v.$white;
+        height: 0.5rem;
+        border-radius: 0.5rem;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        background-color: v.$secondary-opaqued;
+        border-radius: 0.5rem;
+      }
+
+      &__container {
+        display: flex;
+        gap: 5rem;
+      }
     }
   }
+
+
 }

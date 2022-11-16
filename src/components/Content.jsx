@@ -17,10 +17,13 @@ const Content = () => {
       <Knowledge />
       <section className='projects-side'>
         <h2 className='subtitle'>Proyectos</h2>
-        <div className='projects-side__card-container'>
-          {data.map((project, i) => <Card key={i}
-            project={project}
-          />)}
+        <div className='projects-side__cards'>
+          <div className='projects-side__cards__container'>
+            {data.map((project, i) => <Card key={i}
+              project={project}
+            />)}
+          </div>
+
         </div>
       </section>
       {/* <section className='contact'>
