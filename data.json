@@ -1,7 +1,7 @@
 [
     {
       "name": "Space tourism",
-      "imgDirection": "../assets/space-tourism.png",
+      "imgDirection": "../assets/space-tourism.webp",
       "technologies": [
         "HTML",
         "SASS",
@@ -13,7 +13,7 @@
     },
     {
       "name": "Interactive card",
-      "imgDirection": "../assets/interactive-card.png",
+      "imgDirection": "../assets/interactive-card.webp",
       "technologies": [
         "HTML",
         "SASS",
@@ -25,7 +25,7 @@
     },
     {
       "name": "Calculator app",
-      "imgDirection": "../assets/calculator-app.png",
+      "imgDirection": "../assets/calculator-app.webp",
       "technologies": [
         "HTML",
         "SASS",

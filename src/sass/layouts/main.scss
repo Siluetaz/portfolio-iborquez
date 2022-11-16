@@ -1,10 +1,12 @@
 @use '../base/variables' as v;
-@import url('https://fonts.googleapis.com/css?family=Space+Grotesk');
+
 
 * {
   font-family: 'Space Grotesk';
   color: v.$font-color;
 }
+
+
 
 html {
   font-size: 62.5%;

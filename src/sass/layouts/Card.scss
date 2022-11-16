@@ -3,15 +3,18 @@
 
 .card {
   min-width: 27rem;
-  @include m.tablet{
+
+  @include m.tablet {
     min-width: 30rem;
   }
-  @include m.desktop{
+
+  @include m.desktop {
     min-width: 43rem;
   }
 
   &__image {
     width: 100%;
+    height: initial;
   }
 
 
