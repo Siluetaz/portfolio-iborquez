@@ -1,0 +1,43 @@
+@use '../base/variables' as v;
+
+.line {
+  margin: 2rem 0;
+  background-color: v.$line;
+  height: 0.1rem;
+  border: none;
+}
+
+.button {
+  background: none;
+  border: none;
+  border-bottom: 0.2rem solid v.$secondary;
+  letter-spacing: 0.05rem;
+  margin: 1rem 0;
+  text-transform: uppercase;
+  padding: 0.8rem;
+  text-decoration: none;
+
+  &:hover {
+    cursor: pointer;
+
+  }
+}
+
+.subtitle {
+  font-weight: initial;
+  text-align: start;
+  margin: 3rem 0;
+  font-size: 2.8rem;
+  color: v.$secondary;
+
+  &__colored {
+
+    color: v.$secondary;
+  }
+
+}
+
+.link {
+  color: v.$secondary;
+  text-decoration: none;
+}

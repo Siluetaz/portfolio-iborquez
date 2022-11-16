@@ -1,0 +1,33 @@
+@use '../base/variables' as v;
+
+.card {
+  &__image {
+    width: 100%;
+    min-width: 25rem;
+    max-width: 43.5rem;
+  }
+
+  &__name {
+    text-align: start;
+    margin: 0.5rem 0;
+    text-transform: uppercase;
+  }
+
+  &__technologies {
+    display: flex;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+
+    li {
+      display: inline;
+      color: v.$font-opaqued;
+    }
+  }
+
+  &__buttons{
+    display: flex;
+    justify-content: space-evenly;
+    gap: 1rem;
+  }
+}
