@@ -1,6 +1,9 @@
 @use '../base/variables' as v;
 @use '../base/mixins' as m;
 
+header{
+  margin-bottom: 4rem;
+}
 .navbar {
   ul {
     padding: 0;
@@ -14,11 +17,11 @@
   .nav {
     gap: 3rem;
     padding: 1.5rem 0 1.5rem;
-    margin: 0 0 2.5rem 0;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    background-color: v.$opaqued-background;
+    background-color: v.$primary-opaqued;
+
 
     &__left {
       display: flex;

@@ -1,11 +1,24 @@
 @use '../base/variables' as v;
+@use '../base/mixins' as m;
 
 .card {
   &__image {
     width: 100%;
     min-width: 25rem;
-    max-width: 43.5rem;
+    max-width: 43rem;
+    @include m.tablet {
+      max-width: 28rem;
+    }
+
+    @include m.desktop {
+      max-width: 35rem;
+    }
+
+    @include m.desktopL {
+      max-width: 43rem;
+    }
   }
+
 
   &__name {
     text-align: start;
@@ -25,7 +38,7 @@
     }
   }
 
-  &__buttons{
+  &__buttons {
     display: flex;
     justify-content: space-evenly;
     gap: 1rem;

@@ -16,10 +16,13 @@
   text-transform: uppercase;
   padding: 0.8rem;
   text-decoration: none;
+  transition: background-color .5s, border .5s;
+  border-radius: .2rem;
 
   &:hover {
     cursor: pointer;
-
+    background-color: v.$primary-opaqued;
+    border-bottom: 0.2rem solid v.$secondary-opaqued;
   }
 }
 
@@ -28,7 +31,7 @@
   text-align: start;
   margin: 3rem 0;
   font-size: 2.8rem;
-  color: v.$secondary;
+  color: v.$font-color;
 
   &__colored {
 
