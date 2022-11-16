@@ -1,5 +1,5 @@
-import { useState } from 'react'
 import '../sass/layouts/Card.scss'
+
 const Card = ({ project }) => {
   const imgUrl = new URL(project.imgDirection, import.meta.url).href
   return (

@@ -3,8 +3,8 @@
 .card {
   &__image {
     width: 100%;
-    min-width: 28rem;
-    max-width: 55rem;
+    min-width: 25rem;
+    max-width: 43.5rem;
   }
 
   &__name {
@@ -28,5 +28,6 @@
   &__buttons{
     display: flex;
     justify-content: space-evenly;
+    gap: 1rem;
   }
 }

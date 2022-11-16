@@ -1,121 +1,5 @@
 @use '../base/variables' as v;
 
-.navbar {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  align-items: center;
-  padding: 1rem 0;
-  margin: 1rem 0;
-
-  ul {
-    padding: 0;
-    margin: 0;
-    gap: 1rem;
-
-    li {
-      display: inline-block;
-    }
-  }
-
-  .name-side {
-    &__name {
-      font-weight: bold;
-      font-size: 1.8rem;
-    }
-  }
-
-  .sites-side {
-    display: flex;
-    gap: 1rem;
-
-    &__logo {
-      width: 2.5rem;
-
-      img {
-        width: 100%;
-      }
-    }
-  }
-}
-
-
-.container {
-  text-align: center;
-  width: 85%;
-  margin: 0 auto;
-
-
-
-  .welcome-side {
-    &__title {
-      text-align: center;
-      margin: 0;
-      font-size: 2.8rem;
-
-      .under {
-        text-decoration: underline v.$line-color;
-      }
-    }
-
-    &__presentation {
-      font-size: 1.5rem;
-      color: v.$font-opaqued;
-    }
-
-
-  }
-
-  .knowledges {
-    display: flex;
-    justify-content: space-around;
-
-    .title {
-      margin: 0;
-      font-size: 2.5rem;
-    }
-
-    .item {
-      font-size: 1.8rem;
-      margin: 1rem 0;
-    }
-  }
-
-  .projects-side {
-    &__card-container {
-      display: flex;
-      justify-content: space-around;
-      flex-wrap: wrap;
-      gap: 4rem;
-    }
-  }
-}
-
-.footer{
-  padding: 2rem 2rem;
-  display: flex;
-  justify-content: space-around;
-  background-color: v.$footer-background;
-  margin: 5rem 0 0 0;
-  align-items: center;
-  &__text{
-    font-size: 1.5rem;
-
-  }
-  .sites{
-    display: flex;
-    gap: 1rem;
-    &__logo {
-      display: inline-flex;
-      width: 2.5rem;
-
-      img {
-        width: 100%;
-      }
-    }
-  }
-}
-
 .line {
   margin: 2rem 0;
   background-color: v.$line;
@@ -126,7 +10,7 @@
 .button {
   background: none;
   border: none;
-  border-bottom: 0.2rem solid v.$line-color;
+  border-bottom: 0.2rem solid v.$secondary;
   letter-spacing: 0.05rem;
   margin: 1rem 0;
   text-transform: uppercase;
@@ -140,13 +24,20 @@
 }
 
 .subtitle {
+  font-weight: initial;
   text-align: start;
   margin: 3rem 0;
-  text-decoration: underline v.$line-color;
+  font-size: 2.8rem;
+  color: v.$secondary;
+
+  &__colored {
+
+    color: v.$secondary;
+  }
 
 }
 
-.link{
-  color: v.$line-color;
+.link {
+  color: v.$secondary;
   text-decoration: none;
 }
