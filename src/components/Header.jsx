@@ -1,9 +1,6 @@
 import '../sass/layouts/Header.scss'
-
 import { Social } from './Social'
-
 import myLogo from '../assets/IB.svg'
-
 
 const Header = () => {
   return (

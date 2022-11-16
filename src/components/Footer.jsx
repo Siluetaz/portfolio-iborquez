@@ -1,8 +1,5 @@
 import '../sass/layouts/Footer.scss'
-
 import { Social } from './Social'
-
-import data from '../../data.json'
 
 const Footer = () => {
   return (

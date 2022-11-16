@@ -1,5 +1,4 @@
 import '../sass/layouts/Social.scss'
-
 import { BsGithub, BsLinkedin } from "react-icons/bs";
 const Social = () => {
   return (
