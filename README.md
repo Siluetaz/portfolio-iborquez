@@ -12,5 +12,5 @@
 - Semantic HTML5 markup
 - CSS custom properties
 - Flexbox
-- SASS
+- Sass
 - [React](https://reactjs.org/) - JS library
