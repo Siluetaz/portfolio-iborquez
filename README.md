@@ -6,7 +6,7 @@
 
 ### Links
 
-- [Live site URL](https://siluetaz.github.io/space-tourism-frontend-mentor/)
+- [Live site URL](https://siluetaz.github.io/portfolio-iborquez/)
 
 ### Built with
 - Semantic HTML5 markup
