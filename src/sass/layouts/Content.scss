@@ -40,27 +40,23 @@
 
 
   .projects-side {
-
-    &__cards {
-      overflow: auto;
-
-      &::-webkit-scrollbar {
-        width: 0.2rem;
-        background-color: v.$white;
-        height: 0.5rem;
-        border-radius: 0.5rem;
-      }
-
-      &::-webkit-scrollbar-thumb {
-        background-color: v.$secondary-opaqued;
-        border-radius: 0.5rem;
-      }
-
       &__container {
         display: flex;
         gap: 5rem;
+
+        &::-webkit-scrollbar {
+          width: 0.2rem;
+          background-color: v.$white;
+          height: 0.5rem;
+          border-radius: 0.5rem;
+        }
+
+        &::-webkit-scrollbar-thumb {
+          background-color: v.$secondary-opaqued;
+          border-radius: 0.5rem;
+        }
       }
-    }
+    
   }
 
 

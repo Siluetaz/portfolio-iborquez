@@ -2,6 +2,8 @@ import '../sass/layouts/Content.scss'
 import { Card } from './Card'
 import { Knowledge } from './Knowledge'
 import data from '../../data.json'
+import ScrollContainer from 'react-indiana-drag-scroll';
+
 const Content = () => {
   return (
     <main className='container'>
@@ -13,14 +15,11 @@ const Content = () => {
       <Knowledge />
       <section className='projects-side'>
         <h2 className='subtitle'>Proyectos</h2>
-        <div className='projects-side__cards'>
-          <div className='projects-side__cards__container'>
-            {data.map((project, i) => <Card key={i}
-              project={project}
-            />)}
-          </div>
+        <ScrollContainer className="projects-side__container" hideScrollbars={false} horizontal={true}>
+          {data.map((project, i) => <Card className="carousel-cell" key={i}
+            project={project}
+          />)}</ScrollContainer>
 
-        </div>
       </section>
     </main>
   )
