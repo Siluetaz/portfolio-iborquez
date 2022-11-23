@@ -1,24 +1,72 @@
+@use 'variables' as v;
+
 @mixin mobile {
-  @media (max-width: 400px) {
-    @content;
-  }
+    @media (max-width: 400px) {
+        @content;
+    }
 }
-    
-@mixin tablet{
+
+@mixin tablet {
     @media (min-width: 768px) {
         @content;
     }
 }
-@mixin desktop{
-    
+
+@mixin desktop {
+
     @media (min-width: 1024px) {
         @content;
     }
 }
-    
-@mixin desktopL{
-    
+
+@mixin desktopL {
+
     @media (min-width: 1440px) {
         @content;
     }
 }
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}
+
+@keyframes changeW {
+    100% {
+        width: initial;
+    }
+}
+
+@keyframes borderEffect {
+    0% {
+
+        box-shadow: 0px 1.5px 1px v.$secondary;
+    }
+
+    25% {
+        box-shadow: 1.5px 0px 1px v.$secondary;
+    }
+
+    50% {
+
+        box-shadow: 0px -1.5px 1px v.$secondary;
+    }
+
+    75% {
+
+        box-shadow: -1.5px 0px 1px v.$secondary;
+    }
+
+    100% {
+        box-shadow: 0px 1.5px 1px v.$secondary;
+
+    }
+}
+

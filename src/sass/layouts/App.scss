@@ -8,29 +8,31 @@
 }
 
 .button {
-  background: none;
+  background: v.$primary;
   border: none;
   border-bottom: 0.2rem solid v.$secondary;
   letter-spacing: 0.05rem;
   text-transform: uppercase;
   padding: 1rem;
   text-decoration: none;
-  transition: background-color .5s, border .5s;
   border-radius: .2rem;
   font-size: 1.45rem;
 
   &:hover {
     cursor: pointer;
-    background-color: v.$primary-opaqued;
-    border-bottom: 0.2rem solid v.$secondary-opaqued;
+    animation: borderEffect 0.58s linear infinite;
+    border: none;
+
   }
 }
+
+
 
 .subtitle {
   font-weight: initial;
   text-align: start;
   margin: 3rem 0;
-  font-size: clamp(2.4rem,4vw, 2.8rem);
+  font-size: clamp(2.4rem, 4vw, 2.8rem);
   color: v.$font-color;
 
   &__colored {
@@ -44,6 +46,7 @@
   color: v.$secondary;
   text-decoration: none;
 }
-.border{
+
+.border {
   border: .01rem solid v.$font-color;
 }
