@@ -18,8 +18,8 @@ const Content = () => {
         naturalSlideWidth={80}
         naturalSlideHeight={80}
         totalSlides={2}
-        touchEnabled={true}
-        dragEnabled={true}
+        isPlaying={true}
+        lockOnWindowScroll={true}
         className="views">
         <Slider className='view'>
           <Slide index={0}>
