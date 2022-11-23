@@ -1,47 +1,36 @@
 import '../sass/layouts/Content.scss'
 import { Card } from './Card'
 import { Knowledge } from './Knowledge'
+import { Skill } from './Skill'
+import { Welcome } from './Welcome'
 import data from '../../data.json'
 import ScrollContainer from 'react-indiana-drag-scroll';
-import { useEffect, useState } from 'react';
-
+import { CarouselProvider, Slider, Slide, ButtonBack, ButtonNext } from 'pure-react-carousel';
+import '../../node_modules/pure-react-carousel/dist/react-carousel.es.css';
 const Content = () => {
 
-  const [welChar, setWelChar] = useState('o')
 
-  useEffect(() => {
-    changeWelChar()
-  }, [welChar])
-
-  const changeWelChar = () => {
-    setTimeout(() => {
-      if (welChar === 'o') {
-        setWelChar('')
-        setTimeout(() => {
-          setWelChar('a')
-        }, 1000)
-      } else if (welChar === 'a') {
-        setWelChar('')
-        setTimeout(() => {
-          setWelChar('o')
-        }, 1000)
-      }
-    }, 2000)
-  }
   return (
     <main className='container'>
-      <section className='welcome-side'>
-        <span className='welcome-side__wel-message'>{`Bienvenid${welChar}`}</span>
-        <h1 className='welcome-side__title'>Soy <span className='under'>Ismael Borquez</span></h1>
-        <p className='welcome-side__presentation'>Analista programador, apasionado por el desarrollo y el adquirir nuevas habilidades y conocimientos.</p>
-      </section>
+      <Welcome />
       <hr className='line' />
-      <section>
-        <div>
-          
-        </div>
-      </section>
-      <Knowledge />
+      <CarouselProvider
+        naturalSlideWidth={80}
+        naturalSlideHeight={80}
+        totalSlides={2}
+        touchEnabled={true}
+        dragEnabled={true}
+        className="views">
+        <Slider className='view'>
+          <Slide index={0}>
+            <Knowledge />
+          </Slide>
+          <Slide index={1}>
+            <Skill />
+          </Slide>
+        </Slider>
+        <ButtonBack className='navigation__circle'></ButtonBack>
+        <ButtonNext className='navigation__circle'></ButtonNext></CarouselProvider>
       <section className='projects-side'>
         <h2 className='subtitle'>Proyectos</h2>
         <ScrollContainer className="projects-side__container" hideScrollbars={false} horizontal={true}>

@@ -1,0 +1,9 @@
+.skills{
+  display: flex;
+  gap: 3rem;
+  justify-content: space-evenly;
+  &__item{
+    margin: 2rem 0;
+    font-size: clamp(1.6rem, 4vw, 1.8rem);
+  }
+}

@@ -18,59 +18,53 @@
     width: 65%;
   }
 
-  .welcome-side {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    &__wel-message {
-      display: block;
-      white-space: nowrap;
-      border-right: 2px solid;
-      animation: typing 1s steps(14), blink .5s infinite step-end alternate, changeW 4s forwards;
-      overflow: hidden;
-      width: 8.3ch;
-      font-size: clamp(2.5rem, 9vw, 3.5rem);
-      font-weight: bold;
-      text-align: start;
-    }
-    &__title {
-      text-align: center;
-      margin: 0;
-      font-size: clamp(2.5rem, 9vw, 3.5rem);
-
-      .under {
-        text-decoration: underline v.$secondary;
-      }
-    }
-
-    &__presentation {
-      font-size: clamp(1.45rem, 2vw, 1.8rem);
-      color: v.$font-opaqued;
-    }
-
-
-  }
 
 
   .projects-side {
-      &__container {
-        display: flex;
-        gap: 5rem;
+    &__container {
+      display: flex;
+      gap: 5rem;
 
-        &::-webkit-scrollbar {
-          width: 0.2rem;
-          background-color: v.$white;
-          height: 0.5rem;
-          border-radius: 0.5rem;
-        }
-
-        &::-webkit-scrollbar-thumb {
-          background-color: v.$secondary-opaqued;
-          border-radius: 0.5rem;
-        }
+      &::-webkit-scrollbar {
+        width: 0.2rem;
+        background-color: v.$white;
+        height: 0.5rem;
+        border-radius: 0.5rem;
       }
-    
+
+      &::-webkit-scrollbar-thumb {
+        background-color: v.$secondary-opaqued;
+        border-radius: 0.5rem;
+      }
+    }
+
   }
 
 
+}
+
+.navigation {
+ 
+  &__circle {
+    width: 1.2rem;
+    height: 1.2rem;
+    background-color: v.$font-opaqued;
+    border-radius: 50%;
+    transition: transform 0.5s;
+    border: none;
+    margin: 0 0.2rem;
+    &:disabled {
+    width: 1.4rem;
+    height: 1.4rem;
+      background-color: v.$secondary-opaqued;
+    }
+  }
+}
+
+.views {
+  position: relative;
+  height: 35rem;
+  .view {
+    height: 100%;
+  }
 }
