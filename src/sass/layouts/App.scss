@@ -31,7 +31,7 @@
 .opacity {
   opacity: 0;
   pointer-events: none;
-  animation: opacityEffect 1s 3.15s forwards cubic-bezier(.14,.44,.84,.8);
+  animation: opacityEffect 1s 3.15s forwards cubic-bezier(.14, .44, .84, .8);
 }
 
 .subtitle {
@@ -55,4 +55,21 @@
 
 .border {
   border: .01rem solid v.$font-color;
+}
+
+.glider-dot {
+  transition: transform .5s;
+  width: 1rem;
+  height: 1rem;
+  &.active {
+    background-color: v.$secondary;
+    transform: scale(1.15);
+  }
+}
+
+.glider {
+  margin: 1rem 0;
+  &::-webkit-scrollbar {
+    display: none;
+  }
 }
