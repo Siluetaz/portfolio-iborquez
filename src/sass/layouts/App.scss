@@ -29,9 +29,9 @@
 }
 
 .opacity {
-  position: fixed;
   opacity: 0;
-  animation: opacityEffect 0.7s 3.15s forwards, posiEffect 0.1s forwards step-end;
+  pointer-events: none;
+  animation: opacityEffect 0.7s 3.15s forwards;
 }
 
 .subtitle {

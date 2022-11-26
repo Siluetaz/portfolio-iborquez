@@ -51,16 +51,7 @@
 
     to {
         opacity: 1;
-    }
-}
-
-@keyframes posiEffect {
-    from {
-        position: fixed;
-    }
-
-    to {
-        position: initial;
+        pointer-events: initial;
     }
 }
 
