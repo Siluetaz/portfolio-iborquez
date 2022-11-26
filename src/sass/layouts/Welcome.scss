@@ -1,4 +1,5 @@
 @use '../base/variables' as v;
+
 .welcome-side {
   display: flex;
   flex-direction: column;
@@ -7,13 +8,19 @@
   &__wel-message {
     display: block;
     white-space: nowrap;
-    border-right: 2px solid;
-    animation: typing 1s steps(14), blink .5s infinite step-end alternate, changeW 4s forwards;
+    border-right: 2px solid white;
+    animation: typing 1s steps(14), blink .3s infinite step-end alternate, changeBorder 1s forwards;
     overflow: hidden;
-    width: 8.3ch;
+    width: 8.4ch;
     font-size: clamp(2.5rem, 9vw, 3.5rem);
     font-weight: bold;
     text-align: start;
+
+    &__char {
+      white-space: nowrap;
+      border-right: 2px solid;
+      animation: blink .5s infinite step-end alternate;
+    }
   }
 
   &__title {

@@ -37,10 +37,15 @@
         border-color: transparent;
     }
 }
+@keyframes blinkChar {
+    50% {
+        border-color: transparent;
+    }
+}
 
-@keyframes changeW {
-    100% {
-        width: initial;
+@keyframes changeBorder {
+    100%{
+        border-color: transparent;
     }
 }
 

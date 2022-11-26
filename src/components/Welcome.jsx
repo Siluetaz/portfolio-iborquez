@@ -25,8 +25,7 @@ const Welcome = () => {
   }
   return (
     <section className='welcome-side'>
-      <span className='welcome-side__wel-message'>{`Bienvenid${welChar}`}</span>
-      <h1 className='welcome-side__title'>Soy <span className='under'>Ismael Borquez</span></h1>
+      <span className='welcome-side__wel-message'>Bienvenid<span className='welcome-side__wel-message__char'>{welChar}</span></span><h1 className='welcome-side__title'>Soy <span className='under'>Ismael Borquez</span></h1>
       <p className='welcome-side__presentation'>Analista programador, apasionado por el desarrollo y el adquirir nuevas habilidades y conocimientos.</p>
     </section>
   )
