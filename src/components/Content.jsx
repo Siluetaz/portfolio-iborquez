@@ -6,7 +6,7 @@ import { Welcome } from './Welcome'
 import data from '../../data.json'
 import ScrollContainer from 'react-indiana-drag-scroll';
 import Glider from 'react-glider';
-import 'glider-js/glider.min.css'; 
+import 'glider-js/glider.min.css';
 const Content = () => {
   return (
     <main className='container'>
@@ -14,13 +14,11 @@ const Content = () => {
       <section className='opacity'>
         <hr className='line' />
         <Glider
+          className="glider-container"
           draggable
           hasDots
           slidesToShow={1}
           scrollLock
-          dragVelocity={3.8}
-          scrollLockDelay={210}
-          duration={0.2}
         >
           <div><Knowledge /></div>
           <div><Skill /></div>
