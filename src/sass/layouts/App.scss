@@ -17,6 +17,8 @@
   text-decoration: none;
   border-radius: .2rem;
   font-size: 1.45rem;
+  color: v.$font-color;
+  transition: animation .5s;
 
   &:hover {
     cursor: pointer;
@@ -26,7 +28,11 @@
   }
 }
 
-
+.opacity {
+  position: fixed;
+  opacity: 0;
+  animation: opacityEffect 0.7s 3.15s forwards, posiEffect 0.1s forwards step-end;
+}
 
 .subtitle {
   font-weight: initial;

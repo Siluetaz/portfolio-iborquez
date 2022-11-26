@@ -4,7 +4,7 @@ import myLogo from '../assets/IB.svg'
 
 const Header = () => {
   return (
-    <header>
+    <header className='opacity'>
       <nav className='navbar'>
         <ul className='nav'>
           <li className='nav__left'>

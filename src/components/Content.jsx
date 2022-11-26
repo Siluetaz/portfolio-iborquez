@@ -13,31 +13,33 @@ const Content = () => {
   return (
     <main className='container'>
       <Welcome />
-      <hr className='line' />
-      <CarouselProvider
-        naturalSlideWidth={80}
-        naturalSlideHeight={80}
-        totalSlides={2}
-        isPlaying={true}
-        lockOnWindowScroll={true}
-        className="views">
-        <Slider className='view'>
-          <Slide index={0}>
-            <Knowledge />
-          </Slide>
-          <Slide index={1}>
-            <Skill />
-          </Slide>
-        </Slider>
-        <ButtonBack className='navigation__circle'></ButtonBack>
-        <ButtonNext className='navigation__circle'></ButtonNext></CarouselProvider>
-      <section className='projects-side'>
-        <h2 className='subtitle'>Proyectos</h2>
-        <ScrollContainer className="projects-side__container" hideScrollbars={false} horizontal={true}>
-          {data.map((project, i) => <Card className="carousel-cell" key={i}
-            project={project}
-          />)}</ScrollContainer>
+      <section className='opacity'>
+        <hr className='line' />
+        <CarouselProvider
+          naturalSlideWidth={80}
+          naturalSlideHeight={80}
+          totalSlides={2}
+          isPlaying={true}
+          lockOnWindowScroll={true}
+          className="views">
+          <Slider className='view'>
+            <Slide index={0}>
+              <Knowledge />
+            </Slide>
+            <Slide index={1}>
+              <Skill />
+            </Slide>
+          </Slider>
+          <ButtonBack className='navigation__circle'></ButtonBack>
+          <ButtonNext className='navigation__circle'></ButtonNext></CarouselProvider>
+        <section className='projects-side'>
+          <h2 className='subtitle'>Proyectos</h2>
+          <ScrollContainer className="projects-side__container" hideScrollbars={false} horizontal={true}>
+            {data.map((project, i) => <Card className="carousel-cell" key={i}
+              project={project}
+            />)}</ScrollContainer>
 
+        </section>
       </section>
     </main>
   )

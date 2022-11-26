@@ -1,24 +1,27 @@
 @use '../base/variables' as v;
+@use '../base/mixins' as m;
 
 .welcome-side {
   display: flex;
   flex-direction: column;
   align-items: center;
+  transform: translateY(11rem);
+  opacity: 0;
+  animation: presentationEffect .8s 2.5s forwards ease-out, opacityEffect 1.5s forwards ease-in-out;
 
   &__wel-message {
     display: block;
     white-space: nowrap;
-    border-right: 2px solid white;
-    animation: typing 1s steps(14), blink .3s infinite step-end alternate, changeBorder 1s forwards;
+    border-right: 2px solid;
+    animation: typing 1s steps(14) forwards, blink .3s infinite step-end alternate, changeBorder 1s forwards step-end;
     overflow: hidden;
-    width: 8.4ch;
     font-size: clamp(2.5rem, 9vw, 3.5rem);
     font-weight: bold;
     text-align: start;
 
     &__char {
       white-space: nowrap;
-      border-right: 2px solid;
+      border-right: .2rem solid;
       animation: blink .5s infinite step-end alternate;
     }
   }
@@ -27,15 +30,33 @@
     text-align: center;
     margin: 0;
     font-size: clamp(2.5rem, 9vw, 3.5rem);
+    animation: typingTitle 1s steps(16) forwards, blink .3s infinite step-end alternate, changeBorder 1s forwards step-end;
+    overflow: hidden;
+    display: block;
+    white-space: nowrap;
+    border-right: 2px solid;
 
     .under {
-      text-decoration: underline v.$secondary;
+      position: relative;
+
+      &::before {
+        content: "";
+        animation: underlineEffect 1s 0.8s forwards cubic-bezier(0.1, -0.6, 0.2, 0);
+        background-color: v.$secondary;
+        height: .3rem;
+        border-radius: .5rem;
+        position: absolute;
+        z-index: -1;
+        bottom: 10%;
+      }
     }
   }
 
   &__presentation {
     font-size: clamp(1.45rem, 2vw, 1.8rem);
     color: v.$font-opaqued;
+    animation: opacityEffect 1s 1.3s forwards;
+    opacity: 0;
   }
 
 
