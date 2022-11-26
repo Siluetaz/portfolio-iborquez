@@ -31,7 +31,7 @@
 .opacity {
   opacity: 0;
   pointer-events: none;
-  animation: opacityEffect 0.7s 3.15s forwards;
+  animation: opacityEffect 1s 3.15s forwards cubic-bezier(.14,.44,.84,.8);
 }
 
 .subtitle {

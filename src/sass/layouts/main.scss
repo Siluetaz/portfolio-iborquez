@@ -19,11 +19,11 @@ html {
     margin: 0;
     color: v.$font-color;
     overflow: hidden;
-    animation: overflowEffect 1s 2.3s forwards step-end;
+    animation: overflowEffect 1s 3.1s forwards step-end;
 
     @include m.desktop {
       margin: 0 1.7rem 0 0;
-      animation: overflowEffectDesktop .1s 3.4s forwards step-end;
+      animation: overflowEffectDesktop .1s 3.1s forwards step-end;
     }
   }
 }
