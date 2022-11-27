@@ -13,9 +13,7 @@
     "react-dom": "^18.2.0",
     "react-glider": "^4.0.2",
     "react-icons": "^4.6.0",
-    "react-indiana-drag-scroll": "^2.2.0",
-    "react-slick": "^0.29.0",
-    "slick-carousel": "^1.8.1"
+    "react-indiana-drag-scroll": "^2.2.0"
   },
   "devDependencies": {
     "@types/react": "^18.0.24",
