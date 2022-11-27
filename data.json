@@ -1,38 +1,44 @@
 [
-    {
-      "name": "Space tourism",
-      "imgDirection": "../assets/space-tourism.webp",
-      "technologies": [
-        "HTML",
-        "SASS",
-        "Vue"
-      ],
-      "siteUrl": "https://siluetaz.github.io/space-tourism-frontend-mentor/",
-      "codeUrl": "https://github.com/Siluetaz/space-tourism-frontend-mentor"
-    
+  {
+    "name": "Space tourism",
+    "imgDirection": {
+      "default": "../assets/space-tourism.webp",
+      "mobile": "../assets/space-tourism-mobile.webp"
     },
-    {
-      "name": "Interactive card",
-      "imgDirection": "../assets/interactive-card.webp",
-      "technologies": [
-        "HTML",
-        "SASS",
-        "Vue"
-      ],
-        "siteUrl": "https://siluetaz.github.io/interactive-card-frontend-mentor/",
-        "codeUrl": "https://github.com/Siluetaz/interactive-card-frontend-mentor"
-      
+    "technologies": [
+      "HTML",
+      "Sass",
+      "Vue"
+    ],
+    "siteUrl": "https://siluetaz.github.io/space-tourism-frontend-mentor/",
+    "codeUrl": "https://github.com/Siluetaz/space-tourism-frontend-mentor"
+  },
+  {
+    "name": "Interactive card",
+    "imgDirection": {
+      "default": "../assets/interactive-card.webp",
+      "mobile": "../assets/interactive-card-mobile.webp"
     },
-    {
-      "name": "Calculator app",
-      "imgDirection": "../assets/calculator-app.webp",
-      "technologies": [
-        "HTML",
-        "SASS",
-        "Vue"
-      ],
-      "siteUrl": "https://siluetaz.github.io/calculator-app-frontend-mentor/",
-      "codeUrl": "https://github.com/Siluetaz/calculator-app-frontend-mentor"
-    
-    }
-  ]
+    "technologies": [
+      "HTML",
+      "Sass",
+      "Vue"
+    ],
+    "siteUrl": "https://siluetaz.github.io/interactive-card-frontend-mentor/",
+    "codeUrl": "https://github.com/Siluetaz/interactive-card-frontend-mentor"
+  },
+  {
+    "name": "Calculator app",
+    "imgDirection": {
+      "default": "../assets/calculator-app.webp",
+      "mobile": "../assets/calculator-app-mobile.webp"
+    },
+    "technologies": [
+      "HTML",
+      "Sass",
+      "Vue"
+    ],
+    "siteUrl": "https://siluetaz.github.io/calculator-app-frontend-mentor/",
+    "codeUrl": "https://github.com/Siluetaz/calculator-app-frontend-mentor"
+  }
+]

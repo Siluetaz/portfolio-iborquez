@@ -1,4 +1,5 @@
 @use '../base/variables' as v;
+@use '../base/mixins' as m;
 
 .line {
   margin: 2rem 0;
@@ -8,25 +9,81 @@
 }
 
 .button {
-  background: v.$primary;
+  background: npne;
   border: none;
-  border-bottom: 0.2rem solid v.$secondary;
-  letter-spacing: 0.05rem;
-  text-transform: uppercase;
-  padding: 1rem;
   text-decoration: none;
-  border-radius: .2rem;
-  font-size: 1.45rem;
+  font-size: clamp(2rem, 4vw, 2.5rem);
   color: v.$font-color;
-  transition: animation .5s;
-
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform .3s, color .5s;
+  
   &:hover {
     cursor: pointer;
-    animation: borderEffect 0.58s linear infinite;
-    border: none;
-
+    color: v.$secondary;
+    transform: scale(1.1);
+    z-index: 1;
+    &::before {
+      animation: beforeEffect .3s ease-out forwards;
+      position: absolute;
+      z-index: 1;
+      bottom: -1.2rem;
+      font-size: clamp(1rem, 3vw, 1.2rem);
+      width: 6.35rem;
+    }
   }
+
+  &__code:hover::before {
+    content: "Ver código";
+  }
+
+  &__page:hover::before {
+    content: "Ver página";
+  }
+
+  // @include m.mobile {
+  //   &::before {
+  //     animation: beforeEffect .3s ease-out forwards;
+  //     position: absolute;
+  //     z-index: 1;
+  //     bottom: -1.5rem;
+  //     font-size: 1rem;
+  //     width: 6.35rem;
+  //   }
+
+  //   &__code::before {
+  //     content: "Ver código";
+  //   }
+
+  //   &__page::before {
+  //     content: "Ver página";
+  //   }
+  // }
 }
+
+
+// .button {
+//   background: v.$primary;
+//   border: none;
+//   border-bottom: 0.2rem solid v.$secondary;
+//   letter-spacing: 0.05rem;
+//   text-transform: uppercase;
+//   padding: 1rem;
+//   text-decoration: none;
+//   border-radius: .2rem;
+//   font-size: 1.45rem;
+//   color: v.$font-color;
+//   transition: animation .5s;
+
+//   &:hover {
+//     cursor: pointer;
+//     animation: borderEffect 0.58s linear infinite;
+//     border: none;
+
+//   }
+// }
 
 .opacity {
   opacity: 0;
@@ -69,19 +126,25 @@
 }
 
 .card-container {
+
   .glider-contain {
     position: relative;
     display: flex;
+    align-items: center;
     justify-content: center;
+
+    .glider-prev,
+    .glider-next {
+      position: initial;
+    }
 
     .projects-glider {
       margin: 0;
-      .glider-track {
-        display: flex;
-        gap: 1rem;
-        .glider-slide {
-          transform: scale(99.8%);
 
+      .glider-track {
+
+        .glider-slide {
+          transform: scale(0.99);
         }
       }
     }
@@ -89,7 +152,7 @@
     .glider-dots {
       position: absolute;
       z-index: 1;
-      bottom: 2%;
+      bottom: -3rem
     }
   }
 }
@@ -100,4 +163,9 @@
   &::-webkit-scrollbar {
     display: none;
   }
+}
+
+.line-tiny {
+  margin: 1rem 0;
+  background-color: v.$secondary-opaqued;
 }

@@ -19,6 +19,8 @@
   }
 
   .projects-side {
+    margin: 1rem 0;
+
     &__container {
       display: flex;
       gap: 5rem;
@@ -75,25 +77,58 @@
   flex-direction: column;
   justify-content: center;
 
-  @include m.tablet {
-    &__info {
-      position: absolute;
-      height: 100%;
-      background-color: #000000df;
-      left: 10%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 30%;
-      pointer-events: none;
-      &__center {
-        display: flex;
-        flex-direction: column-reverse;
-        margin: 0 1rem;
-        
-      pointer-events: all;
-      }
-    }
+  &__info {
+    position: absolute;
+    height: 100%;
+    background-color: #000000e9;
+    left: 10%;
+    display: flex;
+    justify-content: center;
+    width: 30%;
+    min-width: fit-content;
+    pointer-events: none;
+    align-items: center;
 
+    &__center {
+      display: flex;
+      flex-direction: column;
+      padding: 0 1rem;
+      pointer-events: all;
+      gap: 2rem;
+    }
   }
+
+
+}
+
+.slider {
+  display: flex;
+  align-items: center;
+
+  &__arrow {
+    
+    color: v.$font-color;
+    font-size: clamp(3rem, 4vw, 4rem);
+    border: none;
+    display: flex;
+    align-items: center;
+    padding: 0;
+    background: #000000e9;
+    transition: transform .5s, color .5s;
+    position: absolute;
+    z-index: 1;
+    &:hover {
+      cursor: pointer;
+      transform: scale(1.15);
+    color: v.$secondary;
+    }
+    &__prev{
+      left: -0.5rem;
+    }
+    &__next {
+      right: -0.5rem;
+    }
+  }
+
+
 }

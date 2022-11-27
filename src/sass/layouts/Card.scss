@@ -29,6 +29,7 @@
     text-align: center;
     margin: 0.5rem 0;
     text-transform: uppercase;
+    font-size: clamp(1.4rem, 4vw, 1.6rem);
   }
 
   &__technologies {
@@ -41,13 +42,12 @@
     li {
       display: inline;
       color: v.$font-opaqued;
+      font-size: clamp(1.3rem, 4vw, 1.6rem);
     }
   }
 
   &__buttons {
     display: flex;
     justify-content: space-evenly;
-    gap: 1rem;
-    margin: 1rem 0 2rem;
   }
 }
