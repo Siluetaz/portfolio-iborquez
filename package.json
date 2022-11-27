@@ -9,6 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "keen-slider": "^6.8.5",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-glider": "^4.0.2",

@@ -61,16 +61,43 @@
   transition: transform .5s;
   width: 1rem;
   height: 1rem;
+
   &.active {
     background-color: v.$secondary;
     transform: scale(1.15);
   }
 }
 
+.card-container {
+  .glider-contain {
+    position: relative;
+    display: flex;
+    justify-content: center;
+
+    .projects-glider {
+      margin: 0;
+      .glider-track {
+        display: flex;
+        gap: 1rem;
+        .glider-slide {
+          transform: scale(99.8%);
+
+        }
+      }
+    }
+
+    .glider-dots {
+      position: absolute;
+      z-index: 1;
+      bottom: 2%;
+    }
+  }
+}
+
 .glider {
   margin: 1rem 0;
+
   &::-webkit-scrollbar {
     display: none;
   }
 }
-

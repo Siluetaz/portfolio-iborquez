@@ -7,7 +7,9 @@ import data from '../../data.json'
 import ScrollContainer from 'react-indiana-drag-scroll';
 import Glider from 'react-glider';
 import 'glider-js/glider.min.css';
+
 const Content = () => {
+
   return (
     <main className='container'>
       <Welcome />
@@ -25,10 +27,41 @@ const Content = () => {
         </Glider>
         <section className='projects-side'>
           <h2 className='subtitle'>Proyectos</h2>
-          <ScrollContainer className="projects-side__container" hideScrollbars={false} horizontal={true}>
+          <div className='card-container'>
+            <Glider
+              className="glider-container projects-glider"
+              draggable
+              hasDots
+              slidesToShow={1}
+              scrollLock>
+              {data.map((project, i) => <div>
+                <Card key={i}
+                  project={project}
+                />
+              </div>)}
+            </Glider>
+            <div className='card-container__info'>
+              <div className='card-container__info__center'>
+                <div>
+                  <p className='card__name'>Example</p>
+                  <ul className='card__technologies'>
+                    <li>HTML</li>
+                    <li>Sass</li>
+                    <li>Vue</li>
+                  </ul>
+                </div>
+                <div className='card__buttons'>
+                  <a className='button' >Proyecto</a>
+                  <a className='button' >código</a>
+                </div>
+              </div>
+
+            </div>
+          </div>
+          {/* <ScrollContainer className="projects-side__container" hideScrollbars={false} horizontal={true}>
             {data.map((project, i) => <Card className="carousel-cell" key={i}
               project={project}
-            />)}</ScrollContainer>
+            />)}</ScrollContainer> */}
 
         </section>
       </section>
