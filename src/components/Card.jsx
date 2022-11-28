@@ -2,19 +2,19 @@ import { useEffect, useState } from 'react'
 import '../sass/layouts/Card.scss'
 
 const Card = ({ project }) => {
-  const [imgUrl, setImgUrl] = useState(new URL(project.imgDirection.default, import.meta.url).href)
-  
+  const [imgUrl, setImgUrl] = useState()
+  const screenSize = document.body.clientWidth.toFixed()
+
   const catchSize = () => {
-    let screenSize = document.body.clientWidth.toFixed();
     if (screenSize <= 767) {
       setImgUrl(new URL(project.imgDirection.mobile, import.meta.url).href)
-    } else {
+    } else if (screenSize >= 768) {
       setImgUrl(new URL(project.imgDirection.default, import.meta.url).href)
-
     }
   }
-
-  window.addEventListener('resize', catchSize)
+  useEffect(() => {
+    catchSize()
+  }, [screenSize])
 
   return (
     <div className='card'>
