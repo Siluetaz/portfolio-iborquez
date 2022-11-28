@@ -25,44 +25,40 @@
     color: v.$secondary;
     transform: scale(1.1);
     z-index: 1;
-
-    &::before {
-      animation: beforeEffect .3s ease-out forwards;
-      position: absolute;
-      z-index: 1;
-      bottom: -1.2rem;
-      font-size: clamp(1rem, 3vw, 1.2rem);
-      width: 6.35rem;
-    }
   }
 
-  &__code:hover::before {
+  &::before {
+    position: absolute;
+    z-index: 1;
+    bottom: -1.5rem;
+    font-size: clamp(0.7rem, 3vw, 1.2rem);
+    width: 6.35rem;
+  }
+
+  &__code::before {
     content: "Ver código";
   }
-
-  &__page:hover::before {
+  &__page::before {
     content: "Ver página";
   }
 
-  @include m.mobile {
-    &::before {
-      animation: beforeEffect .3s ease-out forwards;
-      position: absolute;
-      z-index: 1;
-      bottom: -1.5rem;
-      font-size: clamp(0.7rem, 2.8vw, 1rem);
-      width: 6.35rem;
+  @include m.tablet {
+    &::before{
+      content: '';
     }
-
-    &__code::before {
+    &:hover::before {
+      animation: beforeEffect .3s ease-out forwards;
+    }
+    &__code:hover::before {
       content: "Ver código";
     }
 
-    &__page::before {
+    &__page:hover::before {
       content: "Ver página";
     }
   }
 }
+
 
 .opacity {
   opacity: 0;
