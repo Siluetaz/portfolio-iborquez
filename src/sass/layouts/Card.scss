@@ -2,17 +2,7 @@
 @use '../base/mixins' as m;
 
 .card {
-  min-width: 27rem;
   height: 100%;
-  min-height: 13.4rem;
-
-  @include m.tablet {
-    min-width: 30rem;
-  }
-
-  @include m.desktop {
-    min-width: 43rem;
-  }
 
   &__info {
     width: 100%;
@@ -29,7 +19,7 @@
     text-align: center;
     margin: 0.5rem 0;
     text-transform: uppercase;
-    font-size: clamp(1.4rem, 4vw, 1.6rem);
+    font-size: clamp(1.3rem, 4vw, 1.6rem);
   }
 
   &__technologies {
@@ -42,12 +32,12 @@
     li {
       display: inline;
       color: v.$font-opaqued;
-      font-size: clamp(1.3rem, 4vw, 1.6rem);
+      font-size: clamp(1.2rem, 3vw, 1.6rem);
     }
   }
 
   &__buttons {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
   }
 }
