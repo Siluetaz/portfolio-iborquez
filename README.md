@@ -1,9 +1,5 @@
 # Portfolio-IBorquez
 
-### Screenshot
-
-![](screenshot.png)
-
 ### Links
 
 - [Live site URL](https://siluetaz.github.io/portfolio-iborquez/)
