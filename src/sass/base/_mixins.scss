@@ -47,13 +47,7 @@
     }
 }
 
-@keyframes opacityEffect {
 
-    to {
-        opacity: 1;
-        pointer-events: initial;
-    }
-}
 
 @keyframes overflowEffect {
     from {
@@ -79,16 +73,7 @@
 
 
 
-@keyframes presentationEffect {
-    from {
-        transform: translateY(11rem);
 
-    }
-
-    to {
-        transform: translateY(0rem);
-    }
-}
 
 @keyframes underlineEffect {
     from {
@@ -147,5 +132,31 @@
     to {
         opacity: 1;
         transform: translateY(0);
+    }
+}
+
+//Home
+@keyframes presentationEffect {
+    from {
+        transform: translateY(11rem);
+    }
+
+    to {
+        transform: translateY(0rem);
+    }
+}
+
+@keyframes lineEffect {
+    to{
+        width: 100%;
+    }
+}
+
+
+//Global
+@keyframes opacityEffect {
+    to {
+        opacity: 1;
+        pointer-events: initial;
     }
 }

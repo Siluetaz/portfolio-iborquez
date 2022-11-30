@@ -18,12 +18,5 @@ html {
     background-color: v.$primary;
     margin: 0;
     color: v.$font-color;
-    overflow: hidden;
-    animation: overflowEffect 1s 3.1s forwards step-end;
-
-    @include m.desktop {
-      margin: 0 1.7rem 0 0;
-      animation: overflowEffectDesktop .1s 3.1s forwards step-end;
-    }
   }
 }

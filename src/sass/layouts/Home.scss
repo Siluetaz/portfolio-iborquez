@@ -55,9 +55,30 @@
   &__presentation {
     font-size: clamp(1.45rem, 2vw, 1.8rem);
     color: v.$font-opaqued;
+  }
+
+  &__opacity {
     animation: opacityEffect 1s 1.3s forwards;
     opacity: 0;
   }
 
+  &__line {
+    animation: lineEffect 1s 3s forwards;
+    margin: 2rem 0;
+    background-color: v.$line;
+    height: 0.1rem;
+    border: none;
+    width: 0;
+  }
+  &__sections-description{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .6rem;
+    margin: .5rem;
+  }
+  &__arrow-up{
+    //transform: rotate(-90deg) rotateX(180deg);
 
+  }
 }

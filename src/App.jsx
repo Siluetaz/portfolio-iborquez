@@ -3,7 +3,6 @@ import { Footer } from './components/Footer'
 import { Content } from './components/Content'
 
 import './sass/layouts/App.scss'
-import { useEffect } from 'react'
 
 const App = () => {
   window.onunload = function () {
@@ -13,7 +12,6 @@ const App = () => {
     <>
       <Header />
       <Content />
-      <Footer />
     </>
   )
 }

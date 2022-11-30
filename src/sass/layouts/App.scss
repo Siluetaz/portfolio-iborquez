@@ -6,6 +6,7 @@
   background-color: v.$line;
   height: 0.1rem;
   border: none;
+  width: 100%;
 }
 
 .button {
@@ -35,20 +36,22 @@
     width: 6.35rem;
   }
 
-  &__code::before {
-    content: "Ver código";
-  }
-  &__page::before {
-    content: "Ver página";
-  }
+  // &__code::before {
+  //   content: "Ver código";
+  // }
+  // &__page::before {
+  //   content: "Ver página";
+  // }
 
   @include m.tablet {
-    &::before{
+    &::before {
       content: '';
     }
+
     &:hover::before {
       animation: beforeEffect .3s ease-out forwards;
     }
+
     &__code:hover::before {
       content: "Ver código";
     }
@@ -90,13 +93,13 @@
 }
 
 .glider-dot {
-  transition: transform .5s;
   width: 1rem;
   height: 1rem;
 
   &.active {
     background-color: v.$secondary;
     transform: scale(1.15);
+    transition: transform .5s linear;
   }
 }
 

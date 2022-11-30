@@ -10,7 +10,7 @@ const Header = () => {
           <li className='nav__left'>
             <img className='nav__left__my-logo' src={myLogo} alt="my-logo" width="5rem" height="5rem" />
             <div className='nav__left__name'>
-              IBorquez
+           
             </div>
           </li>
           <li>
