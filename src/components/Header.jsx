@@ -1,10 +1,10 @@
 import '../sass/layouts/Header.scss'
 import { Social } from './Social'
 import myLogo from '../assets/IB.svg'
-
+import 'animate.css';
 const Header = () => {
   return (
-    <header className='opacity'>
+    <header className='animate__animated animate__delay-3s animate__fadeIn'>
       <nav className='navbar'>
         <ul className='nav'>
           <li className='nav__left'>

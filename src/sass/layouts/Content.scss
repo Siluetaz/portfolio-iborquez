@@ -3,19 +3,24 @@
 
 .container {
   text-align: center;
-  width: 85%;
-  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-  @include m.tablet {
-    width: 80%;
+  .home {
+    width: 75vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
   }
 
-  @include m.desktop {
-    width: 75%;
-  }
-
-  @include m.desktopL {
-    width: 65%;
+  .about {
+    width: 75vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
   }
 
   .projects-side {
@@ -106,7 +111,7 @@
   align-items: center;
 
   &__arrow {
-    
+
     color: v.$font-color;
     font-size: clamp(3rem, 4vw, 4rem);
     border: none;
@@ -117,14 +122,17 @@
     transition: transform .5s, color .5s;
     position: absolute;
     z-index: 1;
+
     &:hover {
       cursor: pointer;
       transform: scale(1.15);
-    color: v.$secondary;
+      color: v.$secondary;
     }
-    &__prev{
+
+    &__prev {
       left: -0.5rem;
     }
+
     &__next {
       right: -0.5rem;
     }

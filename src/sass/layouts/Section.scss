@@ -11,16 +11,33 @@
   grid-auto-rows: 6rem;
   padding: 1rem;
   grid-template-columns: repeat(auto-fill, minmax(20%, 1fr));
-
-
+  // opacity: 0;
+  // transition: opacity .25s, transform .5s;
+  // transform: scale(0) translateY(-10rem);
+  .section{
+    grid-column: span 2;
+  }
   &__section {
     background-color: rgb(33, 33, 33);
     border-radius: .5rem;
-    grid-column: span 2;
+    height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+
+    &__active {
+      color: v.$secondary;
+
+      .sections-container__section__name {
+        opacity: 1;
+        transform: translateY(0rem);
+      }
+
+      .sections-container__section__icon {
+        transform: translateY(0rem);
+      }
+    }
 
     @include m.tablet {
 
@@ -39,16 +56,11 @@
       &:hover {
         .sections-container__section__name {
           opacity: 1;
-          transform: translateY(0rem);
-
-          transform: scale(1.1);
+          transform: scale(1.1) translateY(0rem);
         }
 
         .sections-container__section__icon {
-
-          transform: translateY(0rem);
-
-          transform: scale(1.02);
+          transform: scale(1.02) translateY(0rem);
         }
       }
     }
@@ -65,7 +77,7 @@
     }
 
     &__name {
-      font-size: clamp(1.2rem, 3vw, 1.4rem);
+      font-size: clamp(1.2rem, 3vw, 1.3rem);
 
     }
 

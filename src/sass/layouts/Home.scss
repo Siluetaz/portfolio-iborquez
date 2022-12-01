@@ -1,13 +1,13 @@
 @use '../base/variables' as v;
 @use '../base/mixins' as m;
 
-.welcome-side {
+
+.home-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  transform: translateY(11rem);
-  opacity: 0;
-  animation: presentationEffect .8s 2.5s forwards ease-out, opacityEffect 1.5s forwards ease-in-out;
+  margin-top: 4rem;
+
 
   &__wel-message {
     display: block;
@@ -70,15 +70,57 @@
     border: none;
     width: 0;
   }
-  &__sections-description{
+
+  &__sections-description {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: .6rem;
-    margin: .5rem;
+    margin: .8rem;
+    transition: transform .5s ease, color .5s ease;
+    transform: translateY(-15rem);
+
+    &:hover {
+      color: v.$secondary;
+      cursor: pointer;
+    }
   }
-  &__arrow-up{
+
+  &__arrow-up {
     //transform: rotate(-90deg) rotateX(180deg);
+    transition: transform .5s;
+    transform: rotate(180deg);
+  }
+
+  .opacitySection {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  .active {
+    transform: rotate(0deg) translateY(0);
+
 
   }
+
+  .bounce {
+    animation: bounce .9s infinite alternate forwards;
+  }
+}
+
+
+@keyframes bounce {
+  to {
+    transform: translateY(-.3rem);
+  }
+}
+
+.animate__backOutUp {
+  z-index: -1;
+}
+
+.presentation-fade {
+  transform: translateY(11rem);
+  opacity: 0;
+  animation: presentationEffect .8s 2.5s forwards ease-out, opacityEffect 1.5s forwards ease-in-out;
 }

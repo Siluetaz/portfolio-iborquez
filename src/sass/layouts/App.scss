@@ -62,11 +62,10 @@
   }
 }
 
-
 .opacity {
   opacity: 0;
   pointer-events: none;
-  animation: opacityEffect 1s 3.15s forwards cubic-bezier(.14, .44, .84, .8);
+  animation: opacityEffect 1s forwards ease;
 }
 
 .subtitle {
