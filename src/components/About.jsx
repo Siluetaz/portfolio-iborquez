@@ -9,6 +9,7 @@ import { MdNavigateNext, MdNavigateBefore } from "react-icons/md";
 import { useRef, useState } from 'react'
 import { HiCode } from "react-icons/hi";
 import { TbExternalLink } from "react-icons/tb";
+import {NavigationBar} from './NavigationBar'
 
 const About = ({ }) => {
   const gliderRef = useRef();
@@ -24,6 +25,7 @@ const About = ({ }) => {
   }
   return (
     <section className='opacity about'>
+      <NavigationBar/>
       <Glider
         className="glider-container"
         draggable

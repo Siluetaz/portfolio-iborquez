@@ -67,6 +67,12 @@
   pointer-events: none;
   animation: opacityEffect 1s forwards ease;
 }
+.user-none{
+  
+  opacity: 0;
+  pointer-events: none;
+  animation: opacityEffect 3s forwards ease;
+}
 
 .subtitle {
   font-weight: initial;

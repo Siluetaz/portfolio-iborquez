@@ -14,8 +14,10 @@
   // opacity: 0;
   // transition: opacity .25s, transform .5s;
   // transform: scale(0) translateY(-10rem);
-  .section{
+  .section-mask{
     grid-column: span 2;
+    color: inherit;
+    text-decoration: none;
   }
   &__section {
     background-color: rgb(33, 33, 33);
@@ -25,7 +27,7 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-
+    transition: color .5s, transform .5s;
     &__active {
       color: v.$secondary;
 
@@ -56,11 +58,11 @@
       &:hover {
         .sections-container__section__name {
           opacity: 1;
-          transform: scale(1.1) translateY(0rem);
+          transform: translateY(0rem);
         }
 
         .sections-container__section__icon {
-          transform: scale(1.02) translateY(0rem);
+          transform: translateY(0rem);
         }
       }
     }

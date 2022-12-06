@@ -4,7 +4,7 @@ import myLogo from '../assets/IB.svg'
 import 'animate.css';
 const Header = () => {
   return (
-    <header className='animate__animated animate__delay-3s animate__fadeIn'>
+    <header className='animate__animated animate__delay-3s user-none animate__fadeIn'>
       <nav className='navbar'>
         <ul className='nav'>
           <li className='nav__left'>
